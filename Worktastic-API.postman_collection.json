@@ -1,0 +1,322 @@
+{
+	"info": {
+		"_postman_id": "50b40bd7-f57b-4d52-9b80-388faa4994ee",
+		"name": "Worktastic-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET all Jobs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5000/jobs",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create job",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0NDUwMjE5MSwianRpIjoiZTJmZWMxM2YtNmJmZi00NzA4LWE3ZTktZGNiOTMyZmQ3MjJlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNjQ0NTAyMTkxLCJleHAiOjE2NDQ1MDMwOTF9.pOWFcV2fPcRf6kgRCH14gYRC1a-71OLpYfBLZ1j5Owk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Software Experte\",\r\n    \"description\": \"Software Experte in Hamburg gesucht\",\r\n    \"salary\": 60000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/jobs",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get single Job",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5000/jobs/1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"jobs",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Publish Job",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0NDUwMDQ3NSwianRpIjoiZjFkMTQwNjctMmM2My00YjM5LWJhN2ItOWNlN2I3OThhZjY3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNjQ0NTAwNDc1LCJleHAiOjE2NDQ1MDEzNzV9.PTxkIIRLrI5KKJvnTbBeXgoU9vxDLLt5TfincEY9YzU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5000/jobs/8/publish",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"jobs",
+						"8",
+						"publish"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Draft Job",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0NDUwMDQ3NSwianRpIjoiZjFkMTQwNjctMmM2My00YjM5LWJhN2ItOWNlN2I3OThhZjY3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNjQ0NTAwNDc1LCJleHAiOjE2NDQ1MDEzNzV9.PTxkIIRLrI5KKJvnTbBeXgoU9vxDLLt5TfincEY9YzU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5000/jobs/8/publish",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"jobs",
+						"8",
+						"publish"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Job",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0NDUwMDQ3NSwianRpIjoiZjFkMTQwNjctMmM2My00YjM5LWJhN2ItOWNlN2I3OThhZjY3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNjQ0NTAwNDc1LCJleHAiOjE2NDQ1MDEzNzV9.PTxkIIRLrI5KKJvnTbBeXgoU9vxDLLt5TfincEY9YzU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Software Experte 2\",\r\n    \"description\": \"Software Experte in Hamburg gesucht\",\r\n    \"salary\": 60000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/jobs/8",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"jobs",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Job",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0NDUwMDQ3NSwianRpIjoiZjFkMTQwNjctMmM2My00YjM5LWJhN2ItOWNlN2I3OThhZjY3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNjQ0NTAwNDc1LCJleHAiOjE2NDQ1MDEzNzV9.PTxkIIRLrI5KKJvnTbBeXgoU9vxDLLt5TfincEY9YzU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5000/jobs/8",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"jobs",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"jannick@gmx.de\",\r\n    \"password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/users",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Access Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"jannick@gmx.de\",\r\n    \"password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/token",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh Token",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0NDUwMjExMiwianRpIjoiZmQ0MDM2NzktMGNiZi00ZTdiLThiZmMtMTk1NzQ2NzBjNmNhIiwidHlwZSI6InJlZnJlc2giLCJzdWIiOjIsIm5iZiI6MTY0NDUwMjExMiwiZXhwIjoxNjQ3MDk0MTEyfQ.T-SumQy2dtVUMU4dSYDVIITZ6rOTFmkMiia4J-Xxg6A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5000/refresh",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
